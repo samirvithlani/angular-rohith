@@ -1,0 +1,20 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr *ngFor ="let e of employee">
+        <th scope="row">{{e.id}}</th>
+        <td>{{e.name}}</td>
+        <td>{{e.username}}</td>
+        <td>{{e.handle}}</td>
+      </tr>
+           
+    </tbody>
+  </table>

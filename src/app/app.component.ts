@@ -70,11 +70,5 @@ export class AppComponent {
       "Rajnikanth",
       "Chiranhivi"
     ]
-
-
-
     
-
-
-
 }

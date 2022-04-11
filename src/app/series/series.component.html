@@ -1,0 +1,21 @@
+<h1>LIST OF SERIES</h1>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Description</th>
+        <th scope="col">ratings</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let s of series">
+        <th scope="row">{{s.id}}</th>
+        <td>{{s.name}}</td>
+        <td>{{s.description}}</td>
+        <td>{{s.rating}}</td>
+      </tr>
+      
+    </tbody>
+  </table>
