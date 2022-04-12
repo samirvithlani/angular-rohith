@@ -1,0 +1,54 @@
+API module in ANGULAR  -->
+
+spring boot applicatione --> 
+HTTPClientModule
+
+-->service layer -->
+
+service file --?
+
+ng g service servicename
+
+Observerable --> consume data from API -> and 
+sibscribe will subcrube Data from observable..
+-------------------------------------------------------------------------------------------------------------------
+
+API CALLING PART FROM ANGULAR:-
+
+1) Include HTTPCLIENT MODULE IN APP.module.ts
+eg:
+import {HttpClientModule} from '@angular/common/http';
+ imports: [
+    HttpClientModule
+  ],
+
+2)Create service file using command ng g serive doctorservice
+import { HttpClient } from '@angular/common/http';
+
+create object of HttpClient inside construtor
+constructor(private htttpClient:HttpClient) { }
+
+inside service create public method for get,update,delete,put,and all apis.....
+
+eg:
+
+public getAllDoctors():Observable<any>{
+
+    return this.htttpClient.get("http://localhost:8080/getalldoctors");
+ }
+
+3)insdide your component you have to creatre obejct of service inside construtor:
+constructor(private service:DoctorserviceService) { }
+
+you can call methpod of serice using service object inside any method or any lifecyle method
+ngOnint(){
+
+	
+}
+
+when you call method from service you have to subscribe data from Observable
+
+  this.service.getAllDoctors().subscribe((res)=>{
+        this.doctors=res;
+      })
+

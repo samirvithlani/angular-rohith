@@ -1,0 +1,22 @@
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">DOCTOR ID</th>
+        <th scope="col">DOCTOR NAME</th>
+        <th scope="col">DOCTOR EMAIL</th>
+        <th scope="col">DOCTOR AGE</th>
+        <th scope="col">DOCTOR Experiance</th>
+        <th scope="col">ACTION</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let d of doctors">
+        <th scope="row">{{d.dId}}</th>
+        <td>{{d.dName}}</td>
+        <td>{{d.dEmail}}</td>
+        <td>{{d.dAge}}</td>
+        <td>{{d.dExp}}</td>
+        <td><button class="btn btn-danger" (click)="deleteDoctor(d.dId)">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>

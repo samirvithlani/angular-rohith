@@ -16,6 +16,8 @@ import { MoviebarComponent } from './moviebar/moviebar.component';
 import { MoviesComponent } from './movies/movies.component';
 import { SeriesComponent } from './series/series.component';
 import { MoviedetailComponent } from './moviedetail/moviedetail.component';
+import { DoctorComponent } from './doctor/doctor.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -32,11 +34,13 @@ import { MoviedetailComponent } from './moviedetail/moviedetail.component';
     MoviebarComponent,
     MoviesComponent,
     SeriesComponent,
-    MoviedetailComponent
+    MoviedetailComponent,
+    DoctorComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
