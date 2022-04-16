@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { BlogsComponent } from './blogs/blogs.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { DetailComponent } from './detail/detail.component';
+import { DocdetailComponent } from './docdetail/docdetail.component';
 import { HomeComponent } from './home/home.component';
 import { MoviedetailComponent } from './moviedetail/moviedetail.component';
 import { MoviesComponent } from './movies/movies.component';
@@ -39,6 +40,9 @@ const routes: Routes = [
  },
  {
    path:'movie/:id',component:MoviedetailComponent
+ },
+ {
+    path:'docdetail/:id',component:DocdetailComponent
  }
 
 ];

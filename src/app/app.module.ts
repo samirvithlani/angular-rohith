@@ -18,6 +18,8 @@ import { SeriesComponent } from './series/series.component';
 import { MoviedetailComponent } from './moviedetail/moviedetail.component';
 import { DoctorComponent } from './doctor/doctor.component';
 import {HttpClientModule} from '@angular/common/http';
+import { DocComponent } from './doc/doc.component';
+import { DocdetailComponent } from './docdetail/docdetail.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import {HttpClientModule} from '@angular/common/http';
     MoviesComponent,
     SeriesComponent,
     MoviedetailComponent,
-    DoctorComponent
+    DoctorComponent,
+    DocComponent,
+    DocdetailComponent
   ],
   imports: [
     BrowserModule,
