@@ -13,11 +13,18 @@ export class DocComponent implements OnInit {
   constructor(private service:DocService) { }
 
   doctors:any[]=[];
+  doc:any;
   getbyid(id:number){
 
       
   } 
 
+  load(id){
+    
+    this.service.getDoctorById(id).subscribe((data)=>{
+      this.doc=data;
+    })
+  }
   delete(id:number){
 
     this.service.deleteDoctor(id).subscribe((data)=>{

@@ -1,0 +1,58 @@
+<h1>ADD EMPLOYEE FORMS</h1>
+<!-- event binding (ngSubmit)="submit()" -->
+<form [formGroup]="employeeForm" (ngSubmit)="submit()">
+
+    <label for="fullname">fullname</label>
+    <input type="text" class="form-control" id="firstName" formControlName="fullName" [(ngModel)]="fullName">
+    <!-- <div *ngIf="employeeForm.controls.fullName.errors?.required">
+            fullname is required
+            </div> -->
+    <span *ngIf="employeeForm.controls['fullName'].invalid && employeeForm.controls['fullName'].untouched">
+        
+        {{employeeForm.controls['fullName'].errors | json}}
+    </span>
+
+    <br>
+    <label for="email">email</label>
+    <input type="text" class="form-control" id="firstName" formControlName="email" [(ngModel)]="email">
+    {{email}}
+    <span *ngIf="employeeForm.controls['email'].invalid && employeeForm.controls['email'].untouched">
+        pls check email formate
+    </span>
+    <br>
+    <label for="email">phoneno</label>
+    <input type="text" class="form-control" id="firstName" formControlName="phoneno" [(ngModel)]="phoneno">
+    <span *ngIf="employeeForm.controls['phoneno'].invalid && employeeForm.controls['phoneno'].untouched">
+        please check len
+    </span>
+    {{phoneno}}
+    <!-- [(ngModel)]="password" 2 way binding -->
+    <label for="password">password</label>
+    <input type="text" class="form-control" id="firstName" formControlName="password" [(ngModel)]="password">
+    <span *ngIf="employeeForm.controls['password'].invalid && !employeeForm.controls['password'].untouched">
+        pls check password
+    </span>
+    <select formControlName ="cars" [(ngModel)]="cars">
+        <option value="">select CAR</option>
+        <option value="audi">AUDI</option>
+        <option value="bmw">BMW</option>
+        <option value="mac">Mac</option>
+    </select>
+    you have selected...{{cars}}
+
+    <br>
+    <br>
+    <div>
+        <input type = "radio" formControlName="gender" value="male">MALE
+        <input type = "radio" formControlName="gender" value="female">FEMALE
+    </div>
+    <div>
+        <input type="checkbox" formControlName = "hobbies" value="singing">singing
+        <input type="checkbox" formControlName = "hobbies" value="reading">reading
+        <input type="checkbox" formControlName = "hobbies" value="da">dancing
+    </div>
+    
+    <!-- property binding -->
+    <button [disabled] = "!employeeForm.valid" type="submit">Submit</button>
+
+</form>

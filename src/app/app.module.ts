@@ -20,6 +20,8 @@ import { DoctorComponent } from './doctor/doctor.component';
 import {HttpClientModule} from '@angular/common/http';
 import { DocComponent } from './doc/doc.component';
 import { DocdetailComponent } from './docdetail/docdetail.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { EmployeeComponent } from './forms/employee/employee.component';
 
 @NgModule({
   declarations: [
@@ -39,12 +41,14 @@ import { DocdetailComponent } from './docdetail/docdetail.component';
     MoviedetailComponent,
     DoctorComponent,
     DocComponent,
-    DocdetailComponent
+    DocdetailComponent,
+    EmployeeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

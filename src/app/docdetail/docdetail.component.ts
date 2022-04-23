@@ -14,32 +14,12 @@ export class DocdetailComponent implements OnInit {
   doctor:any;
 
 
-  ngAfterContentInit(){
-
-    this.id = this.route.snapshot.params['id'];
-    this.service.getDoctorById(this.id).subscribe((data)=>{
-
-        this.doctor=data;
-
-    })
-  
-  }
-  ngAfterViewInit(){
-
-    
-  }
-
-  ngOnChanges(){
-
-  }
   ngOnInit() {
     
     
     this.id = this.route.snapshot.params['id'];
     this.service.getDoctorById(this.id).subscribe((data)=>{
-
         this.doctor=data;
-
     })
   }
 
