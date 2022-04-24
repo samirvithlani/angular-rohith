@@ -1,0 +1,20 @@
+<form [formGroup]="locationForm">
+
+    <div class="form-group">
+        <label for="exampleFormControlSelect1">Example select</label>
+        <select class="form-control" formControlName = "states" (change)="stateChange($event.target.value)">
+            <option value = "">Select State</option>
+            <option *ngFor = "let s of states" [value] = "s.stateId" >{{s.stateName}}</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="exampleFormControlSelect1">Example select</label>
+        <select class="form-control" formControlName = "cities">
+            <option value = "">Select city</option>
+            <option *ngFor = "let c of cities" [value] = "c.cityId">{{c.cityName}}</option>
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

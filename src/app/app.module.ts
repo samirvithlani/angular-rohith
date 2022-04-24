@@ -22,6 +22,7 @@ import { DocComponent } from './doc/doc.component';
 import { DocdetailComponent } from './docdetail/docdetail.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { EmployeeComponent } from './forms/employee/employee.component';
+import { LocationComponent } from './dropdown/location/location.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { EmployeeComponent } from './forms/employee/employee.component';
     DoctorComponent,
     DocComponent,
     DocdetailComponent,
-    EmployeeComponent
+    EmployeeComponent,
+    LocationComponent
   ],
   imports: [
     BrowserModule,
