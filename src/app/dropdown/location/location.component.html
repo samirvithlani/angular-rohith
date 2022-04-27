@@ -1,8 +1,8 @@
-<form [formGroup]="locationForm">
+<form [formGroup]="locationForm" (ngSubmit) = "submit()">
 
     <div class="form-group">
         <label for="exampleFormControlSelect1">Example select</label>
-        <select class="form-control" formControlName = "states" (change)="stateChange($event.target.value)">
+        <select  class="form-control" formControlName = "states" (change)="stateChange($event.target.value)">
             <option value = "">Select State</option>
             <option *ngFor = "let s of states" [value] = "s.stateId" >{{s.stateName}}</option>
         </select>
@@ -15,6 +15,16 @@
             <option *ngFor = "let c of cities" [value] = "c.cityId">{{c.cityName}}</option>
         </select>
     </div>
-
+    <div>
+        <label>IS MARRIED??</label>
+        <input type = "radio" formControlName = "married" value = "yes">yes
+        <input type="radio" formControlName = "married" value = "no">no
+    </div>
+    <div>
+        <label>HOBBIES</label>
+        <input type="checkbox" formArrayName = "hobbies" value = "cricket">cricket
+        <input type="checkbox" formArrayName = "hobbies" value = "football">football
+        <input type="checkbox" formArrayName = "hobbies" value = "vollyball">vollyball
+    </div>
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormArray, FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { DropdownserviceService } from 'src/app/dropdownservice.service';
 
 @Component({
@@ -9,16 +9,26 @@ import { DropdownserviceService } from 'src/app/dropdownservice.service';
 })
 export class LocationComponent implements OnInit {
 
-  constructor(private service: DropdownserviceService) { }
+  constructor(private service: DropdownserviceService) {
+    
+   }
+
   states: any[] = [];
   cities: any[] = [];
 
   locationForm = new FormGroup({
 
     states:new FormControl(''),
-    cities:new FormControl('')
-  })
+    cities:new FormControl(''),
+    married:new FormControl(''),
+    hobbies:new FormArray([])
+  });
   
+  submit(){
+
+    console.log(this.locationForm.value);
+    
+  }
 
   ngOnInit() {
 
