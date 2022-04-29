@@ -1,0 +1,35 @@
+<form [formGroup] = "doctorGroup" (ngSubmit) = "submit()">
+    <div class="form-group">
+        <label for="exampleInputEmail1">Name</label>
+        <input type="email" class="form-control" formControlName ="doctorName"  placeholder="Enter Name">
+        
+            <span style="color: red;" *ngIf="doctorGroup.controls['doctorName'].invalid && doctorGroup.controls['doctorName'].untouched">
+                doctor Name is required
+            </span>
+        
+
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Age</label>
+        <input type="text" class="form-control" formControlName ="dAge"  placeholder="Enter Age">
+        <span style="color: red;" *ngIf="doctorGroup.controls['dAge'].invalid && doctorGroup.controls['dAge'].touched">
+            doctor Name is required
+        </span>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Exp</label>
+        <input type="text" class="form-control" formControlName ="dExp"  placeholder="Enter Exp">
+
+      </div>
+    
+      
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" formControlName = "dEmail" placeholder="Enter email">
+      <span *ngIf = "doctorGroup.controls['dEmail'].invalid && doctorGroup.controls['dEmail'].untouched">
+            email is required...
+      </span>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
