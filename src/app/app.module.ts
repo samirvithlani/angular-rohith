@@ -24,6 +24,13 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { EmployeeComponent } from './forms/employee/employee.component';
 import { LocationComponent } from './dropdown/location/location.component';
 import { ClinicComponent } from './clinic/clinic.component';
+import { AdddoctorComponent } from './crud/adddoctor/adddoctor.component';
+import { DoctorlistComponent } from './crud/doctorlist/doctorlist.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { EditdoctorComponent } from './crud/editdoctor/editdoctor.component';
+import { PipedemoComponent } from './pipedemo/pipedemo.component';
+
+
 
 @NgModule({
   declarations: [
@@ -46,13 +53,20 @@ import { ClinicComponent } from './clinic/clinic.component';
     DocdetailComponent,
     EmployeeComponent,
     LocationComponent,
-    ClinicComponent
+    ClinicComponent,
+    AdddoctorComponent,
+    DoctorlistComponent,
+    EditdoctorComponent,
+    PipedemoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -4,6 +4,7 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { AppComponent } from './app.component';
 import { BlogsComponent } from './blogs/blogs.component';
 import { ContactusComponent } from './contactus/contactus.component';
+import { EditdoctorComponent } from './crud/editdoctor/editdoctor.component';
 import { DetailComponent } from './detail/detail.component';
 import { DocdetailComponent } from './docdetail/docdetail.component';
 import { HomeComponent } from './home/home.component';
@@ -43,6 +44,9 @@ const routes: Routes = [
  },
  {
     path:'docdetail/:id',component:DocdetailComponent
+ },
+ {
+   path:'editdoctor/:id',component:EditdoctorComponent
  }
 
 ];
