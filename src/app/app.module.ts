@@ -29,6 +29,11 @@ import { DoctorlistComponent } from './crud/doctorlist/doctorlist.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { EditdoctorComponent } from './crud/editdoctor/editdoctor.component';
 import { PipedemoComponent } from './pipedemo/pipedemo.component';
+import { TempConvertPipe } from './temp-convert.pipe';
+import { TestcustomepipeComponent } from './testcustomepipe/testcustomepipe.component';
+import { IndexComponent } from './index/index.component';
+import { UserloginComponent } from './userlogin/userlogin.component';
+import { LoginserviceComponent } from './loginservice/loginservice.component';
 
 
 
@@ -57,7 +62,12 @@ import { PipedemoComponent } from './pipedemo/pipedemo.component';
     AdddoctorComponent,
     DoctorlistComponent,
     EditdoctorComponent,
-    PipedemoComponent
+    PipedemoComponent,
+    TempConvertPipe,
+    TestcustomepipeComponent,
+    IndexComponent,
+    UserloginComponent,
+    LoginserviceComponent
   ],
   imports: [
     BrowserModule,

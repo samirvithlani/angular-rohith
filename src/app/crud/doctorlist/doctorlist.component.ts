@@ -24,7 +24,7 @@ export class DoctorlistComponent implements OnInit {
       this.service.getAllDoctors().subscribe(data => {
         this.doctorList = data;
       })
-    
+
     })
 
   }
@@ -32,7 +32,7 @@ export class DoctorlistComponent implements OnInit {
 
     this.service.getAllDoctors().subscribe(data => {
       this.doctorList = data;
-      console.log("-",this.doctorList)
+      console.log("-", this.doctorList)
     })
 
   }

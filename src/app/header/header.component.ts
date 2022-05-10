@@ -8,8 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   constructor() { }
+  dName:string;
+  dEmail:string;
 
   ngOnInit() {
+
+    this.dName = localStorage.getItem('dname')
+    this.dEmail = sessionStorage.getItem('demail')
   }
 
 }
