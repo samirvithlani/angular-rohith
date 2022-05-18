@@ -34,6 +34,11 @@ import { TestcustomepipeComponent } from './testcustomepipe/testcustomepipe.comp
 import { IndexComponent } from './index/index.component';
 import { UserloginComponent } from './userlogin/userlogin.component';
 import { LoginserviceComponent } from './loginservice/loginservice.component';
+import { AuthenticationGuard } from './authentication.guard';
+import { MaterialdemoComponent } from './materialdemo/materialdemo.component';
+import { RouterdemoComponent } from './routerdemo/routerdemo.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+
 
 
 
@@ -67,7 +72,10 @@ import { LoginserviceComponent } from './loginservice/loginservice.component';
     TestcustomepipeComponent,
     IndexComponent,
     UserloginComponent,
-    LoginserviceComponent
+    LoginserviceComponent,
+    MaterialdemoComponent,
+    RouterdemoComponent,
+    PagenotfoundComponent
   ],
   imports: [
     BrowserModule,
@@ -78,7 +86,9 @@ import { LoginserviceComponent } from './loginservice/loginservice.component';
     
     
   ],
-  providers: [],
+  providers: [
+    AuthenticationGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
