@@ -8,6 +8,7 @@ import { ContactusComponent } from './contactus/contactus.component';
 import { EditdoctorComponent } from './crud/editdoctor/editdoctor.component';
 import { DetailComponent } from './detail/detail.component';
 import { DocdetailComponent } from './docdetail/docdetail.component';
+import { GoogleComponent } from './google/google.component';
 import { HomeComponent } from './home/home.component';
 import { IndexComponent } from './index/index.component';
 import { MoviedetailComponent } from './moviedetail/moviedetail.component';
@@ -32,8 +33,8 @@ const routes: Routes = [
   {
     path:'login',component:UserloginComponent
   },
-  {
-    path:'**',component:PagenotfoundComponent
+ {
+    path:'google',component:GoogleComponent
   }
 
 

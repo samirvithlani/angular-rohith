@@ -5,7 +5,18 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+//this component will act as parent component
 export class AppComponent {
+
+
+    inputText:string = "Hi..Have a nice Day !!!";
+
+    DataFromChild:string;
+    reciveDataFromChild(data){
+
+      this.DataFromChild = data;
+
+    }
 
     title = 'learning';
 

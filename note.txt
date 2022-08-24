@@ -52,4 +52,31 @@ when you call method from service you have to subscribe data from Observable
         this.doctors=res;
       })
 
+---------------------------------------------------------------------------------------------------------------
+While developing app we need to pass data from one component to another component. there are 2 decorotors are available
+@Input @Output
+
+we can pass data in 2 ways
+1)Data exchange from parent to child component  @Input
+2)Data exchange from child to parent --> @output dec, EventEmmiter
+
+
+
+
+request.setAttribute("inputFromParent","inputText")
+
+request.get("inputFromParent")
+
+EventEmiiter:
+
+this is used to emit event in components, @output devritive to emit custome events syrnoc,async, and register handler funciont by eventemiiter
+
+
+google compoennt will act as parent component and it will load from router not from app...
+you tube will act as chilc compoent nd it will laod from google component.html ....
+
+-----------
+
+you tube ->load from google -->router -> indepenedent
+
 

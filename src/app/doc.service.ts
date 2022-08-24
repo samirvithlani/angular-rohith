@@ -24,4 +24,5 @@ export class DocService {
 
     return this.httpClient.get("http://localhost:8080/getdoctor/"+id);
   }
+   
 }

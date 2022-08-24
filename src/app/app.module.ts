@@ -38,6 +38,18 @@ import { AuthenticationGuard } from './authentication.guard';
 import { MaterialdemoComponent } from './materialdemo/materialdemo.component';
 import { RouterdemoComponent } from './routerdemo/routerdemo.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { MatComponent } from './mat/mat.component';
+import { Home1Component } from './home1/home1.component';
+import { Header1Component } from './header1/header1.component';
+import { LeftsidebarComponent } from './leftsidebar/leftsidebar.component';
+import { ChildComponent } from './child/child.component';
+import { GoogleComponent } from './google/google.component';
+import { YoutubeComponent } from './youtube/youtube.component';
+
+
+ 
+
+
 
 
 
@@ -75,7 +87,14 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
     LoginserviceComponent,
     MaterialdemoComponent,
     RouterdemoComponent,
-    PagenotfoundComponent
+    PagenotfoundComponent,
+    
+    Home1Component,
+    Header1Component,
+    LeftsidebarComponent,
+    ChildComponent,
+    GoogleComponent,
+    YoutubeComponent
   ],
   imports: [
     BrowserModule,
@@ -84,8 +103,11 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     
+
+    
     
   ],
+  
   providers: [
     AuthenticationGuard
   ],
